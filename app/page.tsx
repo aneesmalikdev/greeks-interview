@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search, MapPin, Star, SlidersHorizontal } from 'lucide-react'
+import { Search, MapPin, Star, SlidersHorizontal, X } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Button } from '@/components/ui/button'
@@ -10,7 +10,7 @@ export default function Home() {
   const operators = [
     {
       name: 'Blue Star Ferries',
-      logo: '/api/placeholder/200/60',
+      logo: '/assets/blue-star-680.png',
       rating: 4.5,
       reviews: 1342,
       operatesIn: ['Greece'],
@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       name: 'Seajets',
-      logo: '/api/placeholder/200/60',
+      logo: '/assets/blue-star-680.png',
       rating: 4.3,
       reviews: 2467,
       operatesIn: ['Greece'],
@@ -76,8 +76,15 @@ export default function Home() {
           {/* Filters Section */}
           <div className='space-y-6'>
             <Card>
-              <CardHeader>
-                <CardTitle className='text-lg'>Filters</CardTitle>
+              <CardHeader className='flex flex-row justify-between items-center'>
+                <CardTitle className='text-lg'>Filters </CardTitle>
+                <button
+                  // onClick={() => {}}
+                  className=' p-1 rounded-full hover:bg-gray-200'
+                  aria-label='Close'
+                >
+                  <X className='w-5 h-5 text-gray-500' />
+                </button>
               </CardHeader>
               <CardContent className='space-y-4'>
                 <div className='space-y-2'>
